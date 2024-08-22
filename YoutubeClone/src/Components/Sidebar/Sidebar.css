@@ -1,0 +1,53 @@
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: sticky;
+  top: 0; /* Stick the sidebar to the top when scrolling */
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Allow scrolling within the sidebar if the content is too tall */
+}
+
+  .sidebar.hidden {
+    transform: translateX(-100%); /* Moves sidebar off-screen */
+  }
+  
+  .side-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .side-link img {
+    width: 24px; /* Size for icons in the upper section */
+    height: 24px;
+    margin-right: 15px;
+  }
+  
+  .side-link p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .subscribed-list h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .subscribed-list .side-link {
+    padding: 8px 0; /* Reduced padding for the subscribed list */
+  }
+  
+  .subscribed-list .side-link img {
+    width: 32px; /* Smaller size for profile pictures */
+    height: 32px;
+    border-radius: 50%; /* Make the profile pictures round */
+    margin-right: 10px;
+  }
+  
+  .subscribed-list .side-link p {
+    margin: 0;
+    font-size: 14px; /* Slightly smaller font for the subscribed list */
+  }
+  

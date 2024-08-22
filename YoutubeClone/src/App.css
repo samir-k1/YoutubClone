@@ -1,0 +1,20 @@
+/* Container for the sidebar and main content */
+.app-layout {
+    display: flex;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fafafa;
+  }
+  

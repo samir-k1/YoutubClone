@@ -1,0 +1,65 @@
+/* Navbar.css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Reduced padding */
+    height: 60px; /* Reduced height */
+    background-color: #f8f9fa; /* Background color for the navbar */
+  }
+  
+  .flex-div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-left img{
+    margin-right: 15px; /* Reduced margin */
+    height: 20px; /* Reduced size */
+    width: 50px; /* Reduced size */
+  }
+  
+  .nav-right img {
+    margin-right: 15px; /* Reduced margin */
+    height: 20px; /* Reduced size */
+    width: 30px; /* Reduced size */
+  }
+  
+  .nav-left img:last-child,
+  .nav-right img:last-child {
+    margin-right: 0;
+  }
+  
+  .Nav.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .Nav.middle input {
+    width: 300px; /* Reduced input width */
+    padding: 6px 10px; /* Reduced padding */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+  }
+  
+  .Nav.middle img {
+    margin-left: 8px; /* Reduced margin */
+    cursor: pointer;
+  }
+  
+  /* Make the profile picture round */
+  .nav-right img[alt="profile"] {
+    border-radius: 50%;
+    height: 30px; /* Adjusted size */
+    width: 30px; /* Adjusted size */
+  }
+  
+  /* Responsive behavior */
+  @media screen and (max-width: 768px) {
+    .Nav.middle input {
+      width: 180px; /* Adjusted for smaller screens */
+    }
+  }
+  
