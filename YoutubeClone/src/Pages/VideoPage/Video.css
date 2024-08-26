@@ -1,0 +1,22 @@
+/* Container for the videos and recommended section */
+.videos-page {
+    display: flex;
+    justify-content: space-between; /* Space between the video and recommendations */
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  /* Styling for the Playvideo section */
+  .play-video {
+    flex: 2; /* Takes up more space */
+    max-width: 100%; /* Ensures it fits within the container */
+  }
+  
+  /* Styling for the Recommended section */
+  .recommended-vdo {
+    flex: 1; /* Takes up less space */
+    max-width: 320px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between video cards */
+  }
+  

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Home from './Pages/Home/Home';
-import Video from './Pages/Video/Video';
+import Videos from './Pages/VideoPage/Videos'
 import './App.css';
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
         <div className="main-content">
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/video/:categoryId/:videoId' element={<Video />} />
+            <Route path='/video/:categoryId/:videoId' element={<Videos />} />
           </Routes>
         </div>
       </div>
