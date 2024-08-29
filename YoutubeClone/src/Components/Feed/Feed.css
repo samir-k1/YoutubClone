@@ -1,41 +1,47 @@
 .feed-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 16px;
-    padding: 16px;
-  }
-  
-  .youtube-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .youtube-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .thumbnail {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-content {
-    padding: 12px;
-  }
-  
-  .video-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .channel-name,
-  .views {
-    font-size: 14px;
-    color: #666;
-    margin: 4px 0;
-  }
-  
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+  gap: 16px; /* Space between items */
+  padding: 16px; /* Padding around the container */
+  justify-content: center; /* Centers items horizontally */
+  overflow: auto; /* Allows scrolling if needed */
+}
+
+.youtube-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Fixed width for each card */
+  border: 1px solid #ddd; /* Border around each card */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures content doesn't overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s; /* Smooth scale transition */
+}
+
+.youtube-card:hover {
+  transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+.thumbnail {
+  width: 100%; /* Full width of the card */
+  height: auto; /* Auto-adjust height to maintain aspect ratio */
+}
+
+.card-content {
+  padding: 16px; /* Padding inside the card */
+  background-color: #fff; /* Background color for content area */
+}
+
+.video-title {
+  font-size: 16px;
+  margin: 0 0 8px 0; /* Margin below the title */
+  font-weight: bold;
+  line-height: 1.4; /* Line height for better readability */
+}
+
+.channel-name {
+  font-size: 14px;
+  color: #555; /* Slightly lighter color for the channel name */
+  margin: 0;
+  line-height: 1.4; /* Line height for better readability */
+}

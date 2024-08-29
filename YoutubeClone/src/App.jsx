@@ -3,11 +3,12 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './Components/NavBar/Navbar';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Home from './Pages/Home/Home';
-import Videos from './Pages/VideoPage/Videos'
+import VideoPlayer from './Pages/VideoPage/VideoPlayer';
 import './App.css';
 
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
+  const [category, setCategory] = useState('');
 
   const toggleSidebar = () => {
     setSidebarVisible(!isSidebarVisible);
@@ -16,15 +17,15 @@ const App = () => {
   return (
     <>
       <Navbar toggleSidebar={toggleSidebar} />
-      <div className="app-layout"> {/* Flexbox container */}
-        {isSidebarVisible && <Sidebar />} {/* Conditionally render the Sidebar */}
+      <div className="app-layout">
+        {isSidebarVisible && <Sidebar onCategoryClick={setCategory} />}
         <div className="main-content">
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/video/:categoryId/:videoId' element={<Videos />} />
+            <Route path='/video/:categoryId/:videoId' element={<VideoPlayer />} />
+            <Route path='/' element={<Home category={category} />} />
           </Routes>
         </div>
-      </div>
+      </div> 
     </>
   );
 };

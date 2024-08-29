@@ -1,0 +1,27 @@
+/* Container for Home component
+.home-container {
+    display: flex;           /* Use flex to align children horizontally */
+ 
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;            /* Set a fixed width for the sidebar */
+    background-color: #f4f4f4; /* Background color for sidebar */
+    padding: 20px;           /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for effect */
+    height: 100%;            /* Make sidebar take the full height of the container */
+    overflow-y: auto;        /* Allow scrolling if content overflows */
+    position: relative;      /* Ensure it's positioned correctly in the flow */
+    z-index: 1;              /* Ensure it stays on top if needed */
+  }
+  
+  /* Feed styles */
+  .feed {
+    flex-grow: 1;            /* Make the feed take the remaining space */
+    background-color: #ffffff; /* Background color for feed */
+    padding: 20px;           /* Padding inside the feed */
+    overflow-y: auto;        /* Allow scrolling if content overflows */
+    height: 100%;            /* Match the height of the container */
+    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+  }
+   */

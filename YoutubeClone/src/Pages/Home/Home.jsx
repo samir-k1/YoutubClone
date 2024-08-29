@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-
-import "./Home.css"
+import React from 'react';
+import './Home.css';
 import Feed from '../../Components/Feed/Feed';
-const Home = () => {
-  const [category , setCategory]=useState(0);
+// import Sidebar from '../../Components/Sidebar/Sidebar'; 
 
+const Home = ({ category }) => {
   return (
+    <div className="home-container">
+      {/* <Sidebar /> */}
+      <Feed category={category} className="feed" />
+    </div>
+  );
+};
 
-    <>
-           <Feed/>
-
-    </>
-  )
-}
-
-export default Home
+export default Home;
